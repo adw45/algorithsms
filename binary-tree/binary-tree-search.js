@@ -22,10 +22,10 @@ function searchRecursive(head, value) {
         return true;
     }
     if (value < head.value && head.left) {
-        return binarySearchTreeRecursive(head.left, value);
+        return searchRecursive(head.left, value);
     }
     if (value > head.value && head.right) {
-        return binarySearchTreeRecursive(head.right, value);
+        return searchRecursive(head.right, value);
     }
     return false;
 }
